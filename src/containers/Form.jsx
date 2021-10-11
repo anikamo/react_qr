@@ -4,6 +4,7 @@ import {
 } from 'shards-react';
 import { HeaderItem } from '../components/HeaderItem';
 import { useFrom } from '../hooks/useForm';
+import { CopyButton } from '../components/CopyButton';
 
 const Form = ({ value, setValue }) => {
   const {
@@ -40,6 +41,7 @@ const Form = ({ value, setValue }) => {
       </Card>
 
       <Button theme="primary" className="mt-4" size="lg">Generate</Button>
+      <CopyButton value={state} />
     </FormShards>
   );
 };

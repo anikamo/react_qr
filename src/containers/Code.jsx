@@ -3,6 +3,7 @@ import {
   Button, Card, CardBody, CardFooter,
 } from 'shards-react';
 import JSONInput from 'react-json-editor-ajrm';
+import { CopyButton } from '../components/CopyButton';
 
 export const Code = ({ value, setValue }) => {
   const [text, setText] = useState({});
@@ -26,6 +27,7 @@ export const Code = ({ value, setValue }) => {
       </CardBody>
       <CardFooter className="pt-0">
         <Button onClick={() => setValue(text)} theme="primary" className="mt-4" size="lg">Generate</Button>
+        <CopyButton value={text} />
       </CardFooter>
     </Card>
   );
